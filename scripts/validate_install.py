@@ -12,8 +12,10 @@ if __name__ == "__main__":
     print(f"[INFO] Create a task with prompt: {env.task_prompt}")
 
     env.reset()
+    print(f"[INFO] reset env successfully.")
     for _ in range(20):
         obs, reward, done, info = env.step(env.action_space.no_op())
+        print(f"[INFO] Step reward: {reward}, done: {done}")
     env.close()
 
     print("[INFO] Installation Success")
